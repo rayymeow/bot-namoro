@@ -38,4 +38,4 @@ client.once('ready', async () => {
 });
 
 // :key: COLOQUE SEU TOKEN AQUI
-client.login('MTQ5MDUxNTM1MjIzNTI3ODUyNg.GCVG2B.ZSmMxlyyg8eD_eESrOqWO9PZuv6OQWhaOTtmto');
+client.login(process.env.TOKEN);
