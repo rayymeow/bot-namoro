@@ -13,8 +13,15 @@ client.once('ready', async () => {
     // :round_pushpin: COLOQUE O ID DO CANAL AQUI
     const channel = await client.channels.fetch('1490517428055052401');
 
+    let message;
+
+    if (1490523365981687808) {
+        message = await channel.messages.fetch(1490523365981687808);
+    } else {
     // Envia mensagem inicial
-    let message = await channel.send("Carregando contagem . . .");
+        message = await channel.send("Carregando contagem . . .");
+            console.log("ID da mensagem:", 1490523365981687808);
+    }
 
     // Atualiza a cada 1 minuto
     setInterval(async () => {
@@ -26,10 +33,10 @@ client.once('ready', async () => {
         const minutes = Math.floor(diff / (1000 * 60)) % 60;
 
         const embed = new EmbedBuilder()
-            .setTitle(":calendar_spiral: Um pedaço de tudo o que passamos juntos . . .")
-            .setDescription(`Juntos há:\n\n💖 ${days} dias\n⏰ ${hours} horas\n🕐 ${minutes} minutos`)
+            .setTitle("_ _ 　　𝄞　 ࣭　　**F**ragmentos que nos tornam ainda melhores.゛　　◌𓈒 <:ringw:1487594612217614518>")
+            .setDescription(`\n<:catheart:1462162063722811424> ${days} dias\n<:cards:1462162167666311312> ${hours} horas\n<:dices:1462162235425030277> ${minutes} minutos`)
             .setColor(0xff69b4)
-            .setFooter({ text: "Desde 01/01/2026 às 00:02 :white_heart:" })
+            .setFooter({ text: "Desde 01/01/2026 às 00:02 <:ringw:1487594612217614518>" })
             .setTimestamp();
 
         await message.edit({ embeds: [embed] });
