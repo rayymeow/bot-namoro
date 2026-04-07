@@ -1,6 +1,11 @@
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ 
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages
+    ] 
+});
 
 const START_DATE = new Date("2026-01-01T00:02:00");
 
@@ -44,6 +49,6 @@ client.once('clientReady', async () => {
     }, 60000);
 });
 
-console.log(process.env.TOKEN);
+console.log("TOKEN carregado?", !!process.env.TOKEN);
 // 👇 AQUI EMBAIXO (última linha)
 client.login(process.env.TOKEN?.trim());
