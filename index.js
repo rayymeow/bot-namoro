@@ -46,4 +46,6 @@ client.once('ready', async () => {
 
 // :key: COLOQUE SEU TOKEN AQUI
 console.log("TOKEN:", process.env.TOKEN);
+console.log("TIPO:", typeof process.env.TOKEN);
+
 client.login(process.env.TOKEN);
