@@ -16,6 +16,7 @@ client.once('clientReady', async () => {
     console.log(`Logado como ${client.user.tag}`);
 
     const channel = await client.channels.fetch(CHANNEL_ID);
+    await channel.send("TESTE");
 
     let message;
 
