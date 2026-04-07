@@ -15,9 +15,13 @@ const CHANNEL_ID = '1490517428055052401';
 client.once('clientReady', async () => {
     console.log(`Logado como ${client.user.tag}`);
 
-    const channel = await client.channels.fetch(CHANNEL_ID);
-    await channel.send("TESTE");
+const channel = await client.channels.fetch(1490517428055052401).catch(console.error);
 
+console.log("Canal:", channel);
+if (!channel) {
+    console.log("❌ Canal não encontrado");
+    return;
+}
     let message;
 
     try {
