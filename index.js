@@ -11,7 +11,6 @@ const START_DATE = new Date("2026-01-01T00:02:00");
 
 // :point_right: COLOCA AQUI
 const CHANNEL_ID = '1490517428055052401';
-const MESSAGE_ID = '1490523365981687808'; // :point_left: mantém como STRING
 
 client.once('clientReady', async () => {
     console.log(`Logado como ${client.user.tag}`);
