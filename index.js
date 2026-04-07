@@ -1,58 +1,18 @@
-const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
-
-const client = new Client({ 
-    intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMessages
-    ] 
-});
-
-const START_DATE = new Date("2026-01-01T00:02:00");
-
-// :point_right: COLOCA AQUI
-const CHANNEL_ID = '1490517428055052401';
-
 client.once('clientReady', async () => {
     console.log(`Logado como ${client.user.tag}`);
 
-const channel = await client.channels.fetch(1490517428055052401).catch(console.error);
+    const guild = client.guilds.cache.first();
 
-console.log("Canal:", channel);
-if (!channel) {
-    console.log("❌ Canal não encontrado");
-    return;
-}
-    let message;
+    console.log("Servidor:", guild?.name);
 
-    try {
-        // tenta pegar a mensagem existente
-        message = await channel.messages.fetch(MESSAGE_ID);
-    } catch {
-        // se não existir, cria uma nova
-        message = await channel.send("Carregando contagem . . .");
-        console.log("Novo ID da mensagem:", message.id);
+    const channel = guild.channels.cache.find(c => c.name === "૮🤍୧﹒𝓒ontagem﹐🗓️ՙִՙ"); // 👈 MUDA AQUI
+
+    console.log("Canal encontrado:", channel?.name);
+
+    if (!channel) {
+        console.log("❌ Canal não encontrado");
+        return;
     }
 
-    setInterval(async () => {
-        const now = new Date();
-        const diff = now - START_DATE;
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
-        const minutes = Math.floor(diff / (1000 * 60)) % 60;
-
-        const embed = new EmbedBuilder()
-            .setTitle("_ _ 　　𝄞　 ࣭　　**F**ragmentos que nos tornam ainda melhores.゛　　◌𓈒 :ringw:")
-            .setDescription(`\n<:catheart:1462162063722811424> ${days} dias\n<:cards:1462162167666311312> ${hours} horas\n<:dices:1462162235425030277> ${minutes} minutos`)
-            .setColor(0xff69b4)
-            .setFooter({ text: "Desde 01/01/2026 às 00:02 :ringw:" })
-            .setTimestamp();
-
-        await message.edit({ embeds: [embed] });
-
-}, 5000);
+    await channel.send("TESTE DIRETO FUNCIONANDO");
 });
-
-console.log("TOKEN carregado?", !!process.env.TOKEN);
-// 👇 AQUI EMBAIXO (última linha)
-client.login(process.env.TOKEN?.trim());
