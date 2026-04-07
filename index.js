@@ -44,4 +44,5 @@ client.once('clientReady', async () => {
     }, 60000);
 });
 
+console.log(process.env.TOKEN);
 client.login(process.env.TOKEN);
