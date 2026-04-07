@@ -60,7 +60,7 @@ client.on('clientReady', async () => {
                 .setDescription(
                     `\n<:catheart:1462162063722811424> ${days} dias\n<:cards:1462162167666311312> ${hours} horas\n<:dices:1462162235425030277> ${minutes} minutos`
                 )
-                .setColor(d9d7d5)
+                .setColor(0xD9D7D5)
                 .setFooter({ text: "  　　Desde 01/01/2026 às 00:02" })
                 .setTimestamp();
 
