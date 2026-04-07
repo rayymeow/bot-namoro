@@ -46,7 +46,7 @@ client.once('clientReady', async () => {
 
         await message.edit({ embeds: [embed] });
 
-    }, 60000);
+}, 5000);
 });
 
 console.log("TOKEN carregado?", !!process.env.TOKEN);
