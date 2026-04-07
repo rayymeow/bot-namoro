@@ -45,4 +45,4 @@ client.once('ready', async () => {
 });
 
 // :key: COLOQUE SEU TOKEN AQUI
-client.login('MTQ5MDUxNTM1MjIzNTI3ODUyNg.GZL5tn.iQCzI9T0jg3LcWWYCYnD6iRXRkxX-xLweKPp2Y');
+client.login('token');
