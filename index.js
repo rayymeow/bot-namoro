@@ -45,7 +45,4 @@ client.once('ready', async () => {
 });
 
 // :key: COLOQUE SEU TOKEN AQUI
-console.log("TOKEN:", process.env.TOKEN);
-console.log("TIPO:", typeof process.env.TOKEN);
-
-client.login(process.env.TOKEN);
+client.login('MTQ5MDUxNTM1MjIzNTI3ODUyNg.GZL5tn.iQCzI9T0jg3LcWWYCYnD6iRXRkxX-xLweKPp2Y');
