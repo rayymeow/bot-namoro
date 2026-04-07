@@ -1,4 +1,4 @@
-client.once('clientReady', async () => {
+client.once('ready', async () => {
     console.log(`Logado como ${client.user.tag}`);
 
     const guild = client.guilds.cache.first();
