@@ -1,13 +1,9 @@
 client.once('ready', async () => {
     console.log(`Logado como ${client.user.tag}`);
 
-    const guild = client.guilds.cache.first();
+    const channel = await client.channels.fetch("1490517428055052401");
 
-    console.log("Servidor:", guild?.name);
-
-    const channel = guild.channels.cache.find(c => c.name === "૮🤍୧﹒𝓒ontagem﹐🗓️ՙִՙ"); // 👈 MUDA AQUI
-
-    console.log("Canal encontrado:", channel?.name);
+    console.log("Canal encontrado:", channel?.id);
 
     if (!channel) {
         console.log("❌ Canal não encontrado");
