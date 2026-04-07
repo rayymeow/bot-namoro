@@ -45,4 +45,5 @@ client.once('ready', async () => {
 });
 
 // :key: COLOQUE SEU TOKEN AQUI
+console.log("TOKEN:", process.env.TOKEN);
 client.login(process.env.TOKEN);
