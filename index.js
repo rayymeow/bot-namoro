@@ -56,11 +56,11 @@ client.on('clientReady', async () => {
             const minutes = Math.floor(diff / (1000 * 60)) % 60;
 
             const embed = new EmbedBuilder()
-                .setTitle("_ _ 　　𝄞　 ࣭　　**F**ragmentos que nos tornam ainda melhores.゛　　◌𓈒 <:ringw:1487594612217614518>")
+                .setTitle("_ _ 　𝄞　 ࣭　　**F**ragmentos que nos tornam ainda melhores.゛　　◌𓈒 <:ringw:1487594612217614518>")
                 .setDescription(
                     `\n<:catheart:1462162063722811424> ${days} dias\n<:cards:1462162167666311312> ${hours} horas\n<:dices:1462162235425030277> ${minutes} minutos`
                 )
-                .setColor(0xff69b4)
+                .setColor(d9d7d5)
                 .setFooter({ text: "_ _ 　　Desde 01/01/2026 às 00:02" })
                 .setTimestamp();
 
